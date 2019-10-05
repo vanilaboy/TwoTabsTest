@@ -95,15 +95,4 @@ public class TabActivity extends AppCompatActivity {
         if (mTab2 != null && mTab2.isAdded())
             getSupportFragmentManager().putFragment(outState, SECOND_FRAGMENT, mTab2);
     }
-
-    @Override
-    protected void onDestroy() {
-        if (mTab1 != null) {
-            mTab1.onSaveInstanceState(new Bundle());
-        }
-        if (mTab2 != null) {
-            mTab2.onSaveInstanceState(new Bundle());
-        }
-        super.onDestroy();
-    }
 }
